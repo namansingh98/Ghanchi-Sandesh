@@ -6,6 +6,10 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import { BsShare } from "react-icons/bs";
 import { data } from "../data/NewsData";
 import { PiDotsThreeOutlineVertical } from "react-icons/pi";
+import Link from 'next/link';
+import Summary from "../Summary/Summary";
+
+
 
 interface NewsData {
   title: string;
@@ -24,7 +28,7 @@ const NewsFeed: React.FC = () => {
   return (
     <>
       <div className="pt-6 pb-12">
-        <div className="">
+        <Link href='/Summary' className="" >
           <div className="container w-100 lg:w-4/5 mx-auto flex flex-col">
             <div
               v-for="card in cards"
@@ -91,7 +95,7 @@ const NewsFeed: React.FC = () => {
           </div>
 
           {/* <!--/ card--> */}
-        </div>
+        </Link>
         {/* <!--/ flex--> */}
       </div>
       {/* </div> */}
